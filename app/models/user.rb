@@ -5,7 +5,7 @@ class User
 
   def initialize(hash)
     hash.each do |key, val|
-      eval("@#{key} = #{val}")
+      eval("@#{key} = '#{val}'")
     end
   end
 
@@ -27,7 +27,7 @@ class User
   end
 
   def self.find_by_id(id)
-    file = "user#{id}.txt"
+    file = "db/user#{id}.txt"
     data = JSON.parse(File.read(file))
     user = User.new(data)
     user.file_name = file

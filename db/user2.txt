@@ -1,1 +1,1 @@
-{"id":1,"password":2,"amount":1000,"token":"s4GCsMbqVuUGoKzBVEgBeQ"}
+{"id":2,"password":2,"amount":1000,"token":"KtUoYHODaEHz1PLSMDOKKg"}
