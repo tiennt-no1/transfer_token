@@ -1,4 +1,4 @@
-
+require 'json'
 class User
 
   attr_accessor :password, :id, :amount, :file_name, :token
@@ -23,7 +23,7 @@ class User
   end
 
   def save
-    File.write(@file_name, self.to_hash)
+    File.write(@file_name, self.to_hash.to_json)
   end
 
   def self.find_by_id(id)
@@ -34,7 +34,7 @@ class User
     user
   end
 
-  def validate(token)
+  def self.validate(token)
     User.all.each do |user|
       return user if user.token == token
     end

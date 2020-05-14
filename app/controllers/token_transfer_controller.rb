@@ -1,5 +1,4 @@
 class TokenTransferController < ApplicationController
-  before_action :validate, only: :amount
 
   def reset
     User.all.each do |user|
