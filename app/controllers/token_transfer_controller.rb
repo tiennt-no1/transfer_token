@@ -20,7 +20,7 @@ class TokenTransferController < ApplicationController
       raise "not enough amount to transfer"
     else
       from_user.amount = from_user.amount.to_f - amount
-      to_user.amount = from_user.amount.to_f + amount
+      to_user.amount = to_user.amount.to_f + amount
       from_user.save
       to_user.save
       render json: { success: true, amount: amount }
