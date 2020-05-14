@@ -1,0 +1,2 @@
+class TokenTransferController < ApplicationController
+end
