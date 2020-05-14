@@ -32,4 +32,6 @@ class TokenTransferController < ApplicationController
     def amount
         render json: current_user.amount
     end
+
+    
 end
