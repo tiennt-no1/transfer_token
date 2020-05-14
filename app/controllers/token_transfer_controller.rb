@@ -17,11 +17,11 @@ class TokenTransferController < ApplicationController
     amount = params[:amount].to_f
 
     if from_user.nil? || to_user.nil?
-    elsif amount > from_user.amount
+    elsif amount > from_user.amount.to_f
       raise "not enough amount to transfer"
     else
-      from_user.amount -= amount
-      to_user.amount += amount
+      from_user.amount = from_user.amount.to_f - amount
+      to_user.amount = from_user.amount.to_f + amount
       from_user.save
       to_user.save
       render json: { success: true, amount: amount }

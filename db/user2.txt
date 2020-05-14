@@ -1,1 +1,1 @@
-{"id":2,"password":2,"amount":1000,"token":"KtUoYHODaEHz1PLSMDOKKg"}
+{:id=>"2", :password=>nil, :amount=>1000.0, :token=>"KtUoYHODaEHz1PLSMDOKKg"}

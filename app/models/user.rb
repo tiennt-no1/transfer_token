@@ -19,7 +19,7 @@ class User
   end
 
   def to_hash
-    { id: @id, password: @password, amount: @amount }
+    { id: @id, password: @password, amount: @amount, token: @token }
   end
 
   def save
